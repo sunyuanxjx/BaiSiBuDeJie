@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="4f2-as-9jY" customClass="XJXTopicVideoView">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="222"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="m1q-Bg-h8F" userLabel="占位图片">
+                    <rect key="frame" x="0.0" y="20" width="343" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="nS3-lo-5NH"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PLT-bR-Cvk">
+                    <rect key="frame" x="0.0" y="0.0" width="343" height="222"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0FL-dp-jLw">
+                    <rect key="frame" x="136" y="75" width="71" height="71"/>
+                    <state key="normal" image="video-play">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4343播放" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZF-Rp-8n0">
+                    <rect key="frame" x="275" y="0.0" width="68" height="18"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03:20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpN-te-JMu" userLabel="Videotimelabel">
+                    <rect key="frame" x="302" y="204" width="41" height="18"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="IZF-Rp-8n0" secondAttribute="trailing" id="4c3-i0-KL7"/>
+                <constraint firstAttribute="bottom" secondItem="PLT-bR-Cvk" secondAttribute="bottom" id="LW7-kE-The"/>
+                <constraint firstAttribute="bottom" secondItem="fpN-te-JMu" secondAttribute="bottom" id="NMK-my-Uh9"/>
+                <constraint firstAttribute="centerY" secondItem="0FL-dp-jLw" secondAttribute="centerY" id="PHr-eC-ggp"/>
+                <constraint firstItem="m1q-Bg-h8F" firstAttribute="top" secondItem="4f2-as-9jY" secondAttribute="top" constant="20" id="PLz-dv-WHB"/>
+                <constraint firstAttribute="centerX" secondItem="0FL-dp-jLw" secondAttribute="centerX" id="SRa-Mq-Tlp"/>
+                <constraint firstAttribute="trailing" secondItem="PLT-bR-Cvk" secondAttribute="trailing" id="d4p-I4-SNl"/>
+                <constraint firstAttribute="trailing" secondItem="fpN-te-JMu" secondAttribute="trailing" id="i3B-R2-hx0"/>
+                <constraint firstItem="PLT-bR-Cvk" firstAttribute="top" secondItem="4f2-as-9jY" secondAttribute="top" id="lLS-8M-PuR"/>
+                <constraint firstItem="IZF-Rp-8n0" firstAttribute="top" secondItem="4f2-as-9jY" secondAttribute="top" id="pCl-Jl-w6r"/>
+                <constraint firstItem="PLT-bR-Cvk" firstAttribute="leading" secondItem="4f2-as-9jY" secondAttribute="leading" id="uX2-bw-z8y"/>
+                <constraint firstAttribute="trailing" secondItem="m1q-Bg-h8F" secondAttribute="trailing" id="wMe-m3-WT8"/>
+                <constraint firstItem="m1q-Bg-h8F" firstAttribute="leading" secondItem="4f2-as-9jY" secondAttribute="leading" id="xCR-YU-3Ti"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageView" destination="PLT-bR-Cvk" id="guE-Ea-N97"/>
+                <outlet property="placeholderView" destination="m1q-Bg-h8F" id="32S-c2-l5t"/>
+                <outlet property="playcountLabel" destination="IZF-Rp-8n0" id="65n-yr-g8r"/>
+                <outlet property="videotimeLabel" destination="fpN-te-JMu" id="MKc-J2-LoF"/>
+            </connections>
+            <point key="canvasLocation" x="198.5" y="-74"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="imageBackground" width="75" height="15"/>
+        <image name="video-play" width="71" height="71"/>
+    </resources>
+</document>

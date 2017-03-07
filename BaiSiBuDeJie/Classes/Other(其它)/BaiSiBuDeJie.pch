@@ -1,0 +1,43 @@
+//
+//  BaiSiBuDeJie.pch
+//  BaiSiBuDeJie
+//
+//  Created by 孙远 on 2017/1/28.
+//  Copyright © 2017年 sunyuan. All rights reserved.
+//
+
+/*
+ 宏编译设置
+ 在 Build Settings中 搜索 prefix
+ 在Apple LLVM8.0 -Language
+ Prefix Header 中 输入 PCH文件地址
+ 只需输入后几位--   BuDeJie/Classes/Other/BuDeJie.pch
+ 
+ 作用:
+ 1.存放公用宏
+ 2.存放公用头文件
+ 3.自定义Log打印
+ */
+
+#import "UIBarButtonItem+XJXItem.h"
+#import "UIView+XJXFrame.h"
+#import "UIImage+XJXOriginalImage.h"
+#import "XJXConst.h"
+#import "UIImageView+XJXDownload.h"
+
+#define XJXColor(r,g,b,d) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:d]
+
+#define XJXGrayColor(r) XJXColor(r, r, r, 1)
+// 随机颜色
+#define XJXRandomColor XJXColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255), 1)
+
+/********屏幕适配***********/
+#define XJXScreenW [UIScreen mainScreen].bounds.size.width
+#define XJXScreenH [UIScreen mainScreen].bounds.size.height
+#define iPhone7plus (XJXScreenH == 736)
+#define iPhone7 (XJXScreenH == 667)
+#define iPhone5 (XJXScreenH == 568)
+#define iPhone4 (XJXScreenH == 480)
+/********屏幕适配***********/
+
+static NSString *code2 = @"phcqnauGuHYkFMRquANhmgN_IauBThfqmgKsUARhIWdGULPxnz3vndtkQW08nau_I1Y1P1Rhmhwz5Hb8nBuL5HDknWRhTA_qmvqVQhGGUhI_py4MQhF1TvChmgKY5H6hmyPW5RFRHzuET1dGULnhuAN85HchUy7s5HDhIywGujY3P1n3mWb1PvDLnvF-Pyf4mHR4nyRvmWPBmhwBPjcLPyfsPHT3uWm4FMPLpHYkFh7sTA-b5yRzPj6sPvRdFhPdTWYsFMKzuykEmyfqnauGuAu95Rnsnbfknbm1QHnkwW6VPjujnBdKfWD1QHnsnbRsnHwKfYwAwiu9mLfqHbD_H70hTv6qnHn1PauVmynqnjclnj0lnj0lnj0lnj0lnj0hThYqniuVujYkFhkC5HRvnB3dFh7spyfqnW0srj64nBu9TjYsFMub5HDhTZFEujdzTLK_mgPCFMP85Rnsnbfknbm1QHnkwW6VPjujnBdKfWD1QHnsnbRsnHwKfYwAwiuBnHfdnjD4rjnvPWYkFh7sTZu-TWY1QW68nBuWUHYdnHchIAYqPHDzFhqsmyPGIZbqniuYThuYTjd1uAVxnz3vnzu9IjYzFh6qP1RsFMws5y-fpAq8uHT_nBuYmycqnau1IjYkPjRsnHb3n1mvnHDkQWD4niuVmybqniu1uy3qwD-HQDFKHakHHNn_HR7fQ7uDQ7PcHzkHiR3_RYqNQD7jfzkPiRn_wdKHQDP5HikPfRb_fNc_NbwPQDdRHzkDiNchTvwW5HnvPj0zQWndnHRvnBsdPWb4ri3kPW0kPHmhmLnqPH6LP1ndm1-WPyDvnHKBrAw9nju9PHIhmH9WmH6zrjRhTv7_5iu85HDhTvd15HDhTLTqP1RsFh4ETjYYPW0sPzuVuyYqn1mYnjc8nWbvrjTdQjRvrHb4QWDvnjDdPBuk5yRzPj6sPvRdgvPsTBu_my4bTvP9TARqnam";

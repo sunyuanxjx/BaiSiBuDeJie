@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>测试页面</title>
+		<script>
+            var bridge = null;
+            
+            // android
+            if ("undefined" != typeof android) {
+                bridge = android;
+            }
+        
+        // ios
+        function onBridgeReady(event) {
+            bridge = event.bridge;
+        }
+        
+        try {
+            document.addEventListener('WebViewJavascriptBridgeReady', onBridgeReady, false)
+        } catch(e) {
+            alert(e);
+        }
+        
+        // functions
+        //分享
+        function shareSNS(snsName, title, imageURL, desc, landURL, audioURL, vedioURL) {
+            if (bridge != null) {
+                var _imageUrl = 'http://ww1.sinaimg.cn/bmiddle/a4224489jw1eeplm05ugjj20go0s4wgq.jpg';
+                var _desc = '分享描述';
+                var _landUrl = 'http://cn.bing.com/';
+                var _audioUrl = 'http://cn.bing.com/';
+                var _vedioUrl = 'http://t.cn/8sM9Pgw';
+
+                bridge.shareSNS(snsName, '活动分享', _imageUrl, _desc, _landUrl, '', '' ,'扩展');
+            } else {
+                alert("不支持的操作！");
+            }
+        }
+        
+        //启动
+        function launchPage(argument) {
+            if (bridge != null) {
+                bridge.launchPage(argument);
+            } else {
+                alert("不支持的操作！");
+            }
+        }
+        
+        // 登录
+        function login() {
+            
+            page = "mod://App_To_Login" + "@" + "type=" + "";
+            if (bridge != null) {
+                bridge.launchPage(page);
+            } else {
+                alert("不支持的操作！");
+            }
+        }
+        
+        function loginSuccess(cookie) {
+            alert(cookie);
+        }
+        
+        function shareSNSSuccess(snsName) {
+            alert(snsName);
+        }
+        
+        function sendTopicSuccess() {
+            alert('发帖成功');
+        }
+        
+        // 发帖
+        function sendTopic(type, param) {
+            page = "mod://" + "App_To_NewTopic" + "@" + "type=" + type + "#" + "param=" + param;
+            if (bridge != null) {
+                //bridge.launchPage(page);
+                bridge.showMoreComment();
+
+            } else {
+                alert("不支持的操作！");
+            }
+        }
+        
+        // test;
+        window.onload = function() {
+            
+            var loginBtn = document.getElementById("login");
+            loginBtn.onclick = function() {
+                //alert("login");
+                login();
+            };
+            
+            var sendTopicBtn = document.getElementById("sendTopic");
+            var sendTopicSelect = document.getElementById("sendTopic_select");
+            var sendTopicText = document.getElementById("sendTopic_text");
+            
+            sendTopicBtn.onclick = function() {
+                var index = sendTopicSelect.selectedIndex;
+                var value = sendTopicSelect.options[index].value;
+                var txtvalue = sendTopicText.value;
+                //alert("value = " + value + ", txtvalue = " + txtvalue);
+                sendTopic(value, txtvalue);
+            };
+            
+            var sharedSelect = document.getElementById("shared_select");
+            var sharedBtn = document.getElementById("shared");
+            sharedBtn.onclick = function() {
+                var index = sharedSelect.selectedIndex;
+                var value = sharedSelect.options[index].value;
+                // alert("value = " + value);
+                //shareSNS(snsName, title,  desc, landURL,imageURL, audioURL, vedioURL)
+                shareSNS(value, "title", "desc", "landurl", "imageurl", "audiourl", "voideurl");
+            }
+            
+            var launchText = document.getElementById("lunchPage_text");
+            var launchPageBtn = document.getElementById("lunchPage");
+            launchPageBtn.onclick = function() {
+                var value = launchText.value;
+                // alert("value = " + value);
+                launchPage(value);
+            }
+        }
+    </script>
+	</head>
+
+	<body>
+		<h1>测试页面</h1>
+		<br />
+		<hr />
+		<div>
+			测试登陆
+		</div>
+		<input type="button" value="登录" id="login">
+		<br />
+		<hr />
+		<div>
+			测试发帖
+		</div>
+		<select id="sendTopic_select">
+			<option value="">全部</option>
+			<option value="2">文字</option>
+			<option value="1">图片</option>
+			<option value="3">声音</option>
+		</select>
+		<input type="text" value="" placeholder="隐含字段" id="sendTopic_text"/>
+		<input type="button" value="发帖" id="sendTopic">
+		<br />
+		<hr />
+		<div>
+			测试分享
+		</div>
+		<select id="shared_select">
+			<option value="">全部</option>
+			<option value="sina">新浪微博</option>
+			<option value="qq">腾讯微博</option>
+			<option value="qzone">QQ空间</option>
+			<option value="qqFriends">QQ好友</option>
+			<option value="wxGroup">微信朋友圈</option>
+			<option value="wxFriends">微信好友</option>
+			<option value="sms">短信/复制</option>
+		</select>
+		<input type="button" value="分享" id="shared">
+		<br />
+		<hr />
+		<div>
+			测试启动页面
+		</div>
+		<input type="text" value="mod://BDJ_To_Recommend@type=1#id=2494065" placeholder="启动类型" id="lunchPage_text"/>
+		<input type="button" value="启动" id="lunchPage">
+	</body>
+</html>

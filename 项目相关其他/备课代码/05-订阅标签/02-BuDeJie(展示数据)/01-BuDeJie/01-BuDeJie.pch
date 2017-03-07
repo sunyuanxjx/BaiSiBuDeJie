@@ -1,0 +1,37 @@
+
+
+
+#ifdef __OBJC__
+
+#import "UIView+Frame.h"
+
+#import "UIImage+Image.h"
+
+#import "UIBarButtonItem+Item.h"
+
+
+#ifdef DEBUG
+
+#define BSLog(...) NSLog(__VA_ARGS__)
+
+#else
+
+#define BSLog(...)
+
+#endif
+
+
+#define BSFunc BSLog(@"%s",__func__);
+
+/*屏幕*/
+
+#define BSScreenH [UIScreen mainScreen].bounds.size.height
+
+#define BSScreenW [UIScreen mainScreen].bounds.size.width
+
+#define iPhone6P (BSScreenH == 736)
+#define iPhone6 (BSScreenH == 667)
+#define iPhone5 (BSScreenH == 568)
+#define iPhone4 (BSScreenH == 480)
+
+#endif

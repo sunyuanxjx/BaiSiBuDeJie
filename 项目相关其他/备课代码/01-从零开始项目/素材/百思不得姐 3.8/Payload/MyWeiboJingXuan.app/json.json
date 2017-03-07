@@ -1,0 +1,32 @@
+[
+ {
+     "db_key": "push_comment",
+     "name": "帖子被评论",
+     "is_show": "1",
+     "user_setting": "1"
+ },
+ {
+     "db_key": "push_reply",
+     "name": "评论被回复",
+     "is_show": "1",
+     "user_setting": "1"
+ },
+ {
+     "db_key": "push_commentup",
+     "name": "评论被顶",
+     "is_show": "1",
+     "user_setting": "1"
+ },
+ {
+     "db_key": "push_addfans",
+     "name": "新增粉丝",
+     "is_show": "1",
+     "user_setting": "1"
+ },
+ {
+     "db_key": "push_praise",
+     "name": "主页被赞",
+     "is_show": "1",
+     "user_setting": "1"
+ }
+]

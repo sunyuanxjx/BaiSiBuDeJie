@@ -1,0 +1,88 @@
+﻿body {
+    margin: 0px;
+}
+
+div {
+    background-repeat: no-repeat;
+}
+
+.raw_image {
+    width: 100%;
+    height: 100%;
+}
+
+.preload {
+    display: none;
+}
+#main_container {
+}
+
+.form_sketch {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.u0_container {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:640px;
+    height:1300px;
+}
+
+#u0_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:640px;
+    height:1300px;
+}
+
+.u1 {
+    position:absolute;
+    left:2px;
+    top:642px;
+    width:636px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u2_normal {
+    background-image: url('../敬请期待_1_files/u2_normal.png');
+}
+
+.u2_container {
+    position:absolute;
+    left:177px;
+    top:922px;
+    width:286px;
+    height:82px;
+}
+
+#u2_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:292px;
+    height:88px;
+}
+
+.u3 {
+    position:absolute;
+    left:2px;
+    top:20px;
+    width:282px;
+    height:42px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+

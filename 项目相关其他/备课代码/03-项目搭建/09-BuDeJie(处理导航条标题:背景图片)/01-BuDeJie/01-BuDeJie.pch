@@ -1,0 +1,26 @@
+
+
+
+#ifdef __OBJC__
+
+#import "UIView+Frame.h"
+
+#import "UIImage+Image.h"
+
+#import "UIBarButtonItem+Item.h"
+
+
+#ifdef DEBUG
+
+#define BSLog(...) NSLog(__VA_ARGS__)
+
+#else
+
+#define BSLog(...)
+
+#endif
+
+
+#define BSFunc BSLog(@"%s",__func__);
+
+#endif
